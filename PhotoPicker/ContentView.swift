@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isShowingPhotoPicker = false
+    
     var body: some View {
         VStack {
             Image(uiImage: UIImage(named: "default-avatar")!)
@@ -16,10 +18,16 @@ struct ContentView: View {
                 .frame(width: 150, height: 150)
                 .clipShape(Circle())
                 .padding()
+                .onTapGesture {
+                    
+                }
             
             Spacer()
         }
         .navigationTitle("Profile")
+        .sheet(isPresented: $isShowingPhotoPicker) {
+            
+        }
     }
 }
 

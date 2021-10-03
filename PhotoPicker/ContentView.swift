@@ -19,14 +19,14 @@ struct ContentView: View {
                 .clipShape(Circle())
                 .padding()
                 .onTapGesture {
-                    
+                    isShowingPhotoPicker = true
                 }
             
             Spacer()
         }
         .navigationTitle("Profile")
         .sheet(isPresented: $isShowingPhotoPicker) {
-            
+            PhotoPicker()
         }
     }
 }
